@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kagumi Coffee</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#" class="logo">KAGUMI <span>CAFFEE</span></a>
+  <div class="icons">
+    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+  </div>
+</header>
+
+<!-- Category -->
+<section id="category">
+  <div class="category-heading">
+    <h2>Category</h2>
+    <span>All</span>
+  </div>
+  <div class="category-container">
+    <a href="#" class="category-box" data-category="all"><img src="image/coffee-cup.png" alt=""><span>All</span></a>
+    <a href="#" class="category-box" data-category="espresso"><img src="image/coffee-cup.png" alt=""><span>Espresso Based</span></a>
+    <a href="#" class="category-box" data-category="flavor"><img src="image/coffee-cup.png" alt=""><span>Coffee Flavors</span></a>
+    <a href="#" class="category-box" data-category="powder"><img src="image/coffee-cup.png" alt=""><span>Powder Based</span></a>
+    <a href="#" class="category-box" data-category="tea"><img src="image/coffee-cup.png" alt=""><span>Tea Series</span></a>
+    <a href="#" class="category-box" data-category="brew"><img src="image/coffee-cup.png" alt=""><span>Manual Brewing</span></a>
+    <a href="#" class="category-box" data-category="snack"><img src="image/coffee-cup.png" alt=""><span>Snack</span></a>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products">
+  <div class="products-heading">
+    <h2>Our Products</h2>
+    <span>View All</span>
+  </div>
+  <div class="products-container">
+
+    <!-- Espresso Based -->
+    <div class="product-box" data-category="espresso"><img src="image/expresso.jpg" alt=""><h3>Espresso</h3><span class="price">RP. 20.000</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="espresso"><img src="image/americano.png" alt=""><h3>Americano</h3><span class="price">20K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="espresso"><img src="image/latte.png" alt=""><h3>Cafe Latte</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="espresso"><img src="image/cappuccino.png" alt=""><h3>Cappucino</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+
+    <!-- Coffee Flavors -->
+    <div class="product-box" data-category="flavor"><img src="image/caramel-latte.png" alt=""><h3>Caramel Latte</h3><span class="price">28K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="flavor"><img src="image/hazelnut-latte.png" alt=""><h3>Hazelnut Latte</h3><span class="price">28K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="flavor"><img src="image/brown-sugar.png" alt=""><h3>Brown Sugar Latte</h3><span class="price">28K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="flavor"><img src="image/rum-latte.png" alt=""><h3>Rum Latte</h3><span class="price">28K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="flavor"><img src="image/mochaccino.png" alt=""><h3>Mochaccino</h3><span class="price">28K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="flavor"><img src="image/oatside.png" alt=""><h3>Coffee Oatside</h3><span class="price">28K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+
+    <!-- Powder Based -->
+    <div class="product-box" data-category="powder"><img src="image/green-tea.png" alt=""><h3>Green Tea Latte</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="powder"><img src="image/choco-latte.png" alt=""><h3>Choco Latte</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+
+    <!-- Tea Series -->
+    <div class="product-box" data-category="tea"><img src="image/japanese-tea.png" alt=""><h3>Japanese Tea</h3><span class="price">20K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="tea"><img src="image/lemon-tea.png" alt=""><h3>Lemon Tea</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="tea"><img src="image/lychee-tea.png" alt=""><h3>Lychee Tea</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="tea"><img src="image/strawberry-tea.png" alt=""><h3>Strawberry Tea</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+
+    <!-- Manual Brewing -->
+    <div class="product-box" data-category="brew"><img src="image/v60.png" alt=""><h3>V60</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="brew"><img src="image/aeropress.png" alt=""><h3>Aeropress</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="brew"><img src="image/kalita-wave.png" alt=""><h3>Kalita Wave</h3><span class="price">25K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="brew"><img src="image/tubruk.png" alt=""><h3>Tubruk</h3><span class="price">15K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+
+    <!-- Snack -->
+    <div class="product-box" data-category="snack"><img src="image/crispy-casava.png" alt=""><h3>Crispy Casava</h3><span class="price">20K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="snack"><img src="image/onion-rings.png" alt=""><h3>Onion Rings</h3><span class="price">20K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="snack"><img src="image/toast.png" alt=""><h3>Toast</h3><span class="price">22K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="snack"><img src="image/mix-platter.png" alt=""><h3>Mix Platter</h3><span class="price">30K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+    <div class="product-box" data-category="snack"><img src="image/french-fries.png" alt=""><h3>French Fries</h3><span class="price">20K</span><div class="product-buttons"><a href="#" class="add-to-cart">Add to Cart</a></div></div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
