@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
 
 :root{
-    --orange:#ff7800;
-    --black:#130f40;
-    --light-color:#666;
-    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-    --border:2rem solid rgba(0,0,0,.1);
-    --outline:.1rem solid rgba(0,0,0.1);
-    --outline-hover:.2rem solid var(--black);
+    --primary-coffee: #6F4E37;  /* Classic coffee brown */
+    --dark-coffee: #4B3621;     /* Darker coffee shade */
+    --light-coffee: #A38F84;    /* Lighter coffee/milk shade */
+    --cream: #F5F0E6;           /* Cream color for backgrounds */
+    --caramel: #D4A76A;         /* Caramel accent color */
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --border: .2rem solid rgba(0,0,0,.1);
+    --outline: .1rem solid rgba(0,0,0,.1);
+    --outline-hover: .2rem solid var(--black);
     --font-family: "Poppins", sans-serif;
 }
 
@@ -29,7 +33,7 @@ html{
 }
 
 body{
-    background: #eee;
+    background-color: var(--cream);
 }
 
 .header{
@@ -39,8 +43,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 9%;
-    background: #fff;
+    padding: 1rem 9%; /* Mengurangi padding vertikal dari 2rem ke 1rem */
+    background: var(--cream);
     box-shadow: var(--box-shadow);
 }
 
@@ -51,7 +55,7 @@ body{
 }
 
 .header .logo span{
-    color:  var(--orange)
+    color: var(--primary-coffee);
 }
 
 .header .icons div{
@@ -59,7 +63,7 @@ body{
     width: 4.5rem;
     line-height: 4.5rem;
     border-radius: .5rem;
-    background: #eee;
+    background: #e8d9c5;
     color: var(--black);
     font-size: 2rem;
     margin-right: .3rem;
@@ -68,7 +72,7 @@ body{
 }
 
 .header .icons div:hover{
-    background: var(--orange);
+    background: var(--primary-coffee);
     color: #fff;
 }
 
@@ -76,27 +80,34 @@ body{
 #category{
     display: flex;
     flex-direction: column;
-    max-width: 1000px;
-    margin: 100px auto;
+    max-width: 1200px;
+    margin: 80px auto 20px; /* Menambah margin-top dari 50px ke 80px */
+    background-color: #e8d9c5; /* Warna seperti kertas kopi/kardus */
+    padding: 30px 9%; /* Menambah padding vertikal dari 20px ke 30px */
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
 }
 
 .category-heading{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px; /* Menambah margin bottom untuk jarak dengan container bawah */
 }
 
 .category-heading h2{
-    font-size: 1.56rem;
+    font-size: 1.8rem; /* Sedikit memperbesar font */
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--dark-coffee);
     letter-spacing: 0.5px;
+    margin: 0; /* Memastikan tidak ada margin tambahan */
 }
 
 .category-heading span{
-    color: var(--primary-color);
-    font-weight: 400;
-    letter-spacing: 1px;
+    color: var(--primary-coffee);
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
 }
 
 .category-container{
@@ -104,6 +115,8 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
+    gap: 15px; /* Memberikan jarak antara category box */
+    flex-wrap: wrap; /* Agar responsive */
 }
 
 .category-box{
@@ -111,11 +124,16 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fafafafa;
+    background-color: var(--cream);
     border-radius: 10px;
     min-height: 130px;
-    width: 120px;
+    flex: 1; /* Agar box bisa mengembang */
+    min-width: 120px; /* Lebar minimum */
+    max-width: 150px; /* Lebar maksimum */
     border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.5 ease;
 }
 
 .category-box img{
@@ -137,16 +155,32 @@ body{
 .category-box:hover{
     transform: scale(1.1);
     transition: all ease 0.1s;
-    background-color: var(--primary-color);
+    background-color: var(--light-coffee);
 }
+
+/* Tambahkan di style.css */
+.category-box.active {
+    background-color: var(--primary-coffee);
+    color: white;
+}
+
+.category-box.active span {
+    color: white;
+}
+
+.category-box.active img {
+    filter: brightness(0) invert(1); /* Mengubah warna ikon menjadi putih */
+}
+
 
 /* Add this to your existing style.css */
 
 /* Products Section */
 #products {
-    padding: 3rem 9%;
-    margin-top: 2rem;
-    background: #fff;
+    padding: 1rem 9%; /* Padding horizontal sama dengan category */
+    margin: 1rem auto; /* Margin auto untuk center */
+    background-color: #e8d9c5; /* Warna seperti kertas kopi/kardus */
+    max-width: 1200px; /* Sama dengan category */
 }
 
 .products-heading {
@@ -159,12 +193,12 @@ body{
 .products-heading h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--black);
+    color: var(--dark-coffee);
     letter-spacing: 0.5px;
 }
 
 .products-heading span {
-    color: var(--orange);
+    color: var(--primary-coffee);
     font-weight: 500;
     font-size: 1.6rem;
     cursor: pointer;
@@ -172,12 +206,12 @@ body{
 
 .products-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
 }
 
 .product-box {
-    background: #f9f9f9;
+    background: var(--cream);
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
@@ -229,7 +263,7 @@ body{
 }
 
 .product-buttons .add-to-cart {
-    background: var(--orange);
+    background: var(--primary-coffee);
     color: #fff;
 }
 
@@ -240,11 +274,11 @@ body{
 }
 
 .product-buttons .add-to-cart:hover {
-    background: #e66900;
+    background: var(--dark-coffee);
 }
 
 .product-buttons .details:hover {
-    background: var(--orange);
+    background: var(--primary-coffee);
     color: #fff;
 }
 
@@ -305,3 +339,24 @@ body{
         height: 15rem;
     }
 }
+
+
+@media (max-width: 768px) {
+    #category, #products {
+        padding: 1rem 5%;
+    }
+    
+    .category-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 15px;
+        flex-wrap: nowrap;
+    }
+    
+    .category-box {
+        scroll-snap-align: start;
+        flex: 0 0 auto;
+    }
+}
+
